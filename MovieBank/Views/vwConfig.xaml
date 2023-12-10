@@ -1,0 +1,36 @@
+﻿<Window x:Class="MovieBank.Views.vwConfig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MovieBank.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" FlowDirection="RightToLeft"
+        Title="vwConfig" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/materialdesigntheme.dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/materialdesigncolor.brown.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <DockPanel>
+        <materialDesign:Card Width="150" Margin="15">
+            <StackPanel DockPanel.Dock="Left" >
+                <Button Name="BtnDirectors" Click="BtnDirectors_Click">کارگردان</Button>
+                <Button Name="BtnMovieGenres" Click="BtnMovieGenres_Click" Margin="0 10">ژانر فیلم</Button>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <materialDesign:Card  Margin="15">
+            <Grid Name="MainGrid">
+                <TextBlock HorizontalAlignment="Center" Foreground="White" FontFamily="/MovieWpfApp;component/Content/Fonts/#IRAN Sans" FontSize="24">
+                    یکی از گزینه های منوی سمت راست را انتخاب کنید
+                </TextBlock>
+            </Grid>
+        </materialDesign:Card>
+    </DockPanel>
+</Window>
